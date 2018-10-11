@@ -8,7 +8,7 @@ const TodoItem = ({ todo, remove }) => (
 TodoItem.propTypes = {
   remove: PropTypes.func.isRequired,
   todo: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired
   }).isRequired
 };

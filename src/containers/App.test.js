@@ -18,4 +18,15 @@ describe('<App />', () => {
     expect(getByText('Test Value')).toBeTruthy();
     expect(container.querySelectorAll('li').length).toBe(listItemCount + 1);
   });
+
+  test('remove item when click on it', () => {
+    // Arrange
+    const { container } = render(<App />);
+    const listItemCount = container.querySelectorAll('li').length;
+    const firstItemFromList = container.querySelectorAll('li')[0];
+    // Act
+    fireEvent.click(firstItemFromList);
+    // Assert
+    expect(container.querySelectorAll('li').length).toBe(listItemCount - 1);
+  });
 });

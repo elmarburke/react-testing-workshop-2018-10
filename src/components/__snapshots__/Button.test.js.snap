@@ -2,6 +2,6 @@
 
 exports[`<Button /> basic render 1`] = `
 <button>
-  Send Data!
+  Send Data
 </button>
 `;

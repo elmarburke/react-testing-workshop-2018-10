@@ -21,7 +21,9 @@ describe('<App />', () => {
 
   test('remove item when click on it', () => {
     // Arrange
-    const { container, queryByTestId, getAllByTestId } = render(<App />);
+    const { container, queryByTestId, getAllByTestId, getByTestId } = render(
+      <App />
+    );
     const listItemCount = getAllByTestId(/todo-list-item-\d+/).length;
     const firstItemFromList = getByTestId('todo-list-item-0');
     // Act

@@ -9,6 +9,6 @@ describe('<Button />', () => {
     // Act
     // Assert
     expect(container).toHaveTextContent('Send Data');
-    expect(asFragment()).toMatchSnapshot()
+    // expect(container.firstChild).toMatchSnapshot()
   });
 });

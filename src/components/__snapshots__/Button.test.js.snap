@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> basic render 1`] = `
+<DocumentFragment>
+  <button>
+    Send Data
+  </button>
+</DocumentFragment>
+`;

@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const TodoItem = ({ todo, remove }) => (
-  <li onClick={() => remove(todo.id)}> {todo.text}</li>
+  <li onClick={() => remove(todo.id)} data-testid={`todo-list-item-${todo.id}`}>
+    {todo.text}
+  </li>
 );
 
 TodoItem.propTypes = {

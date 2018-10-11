@@ -21,12 +21,13 @@ describe('<App />', () => {
 
   test('remove item when click on it', () => {
     // Arrange
-    const { container } = render(<App />);
-    const listItemCount = container.querySelectorAll('li').length;
-    const firstItemFromList = container.querySelectorAll('li')[0];
+    const { container, queryByTestId, getAllByTestId } = render(<App />);
+    const listItemCount = getAllByTestId(/todo-list-item-\d+/).length;
+    const firstItemFromList = getByTestId('todo-list-item-0');
     // Act
     fireEvent.click(firstItemFromList);
     // Assert
-    expect(container.querySelectorAll('li').length).toBe(listItemCount - 1);
+    expect(queryByTestId('todo-list-item-0')).toBeFalsy();
+    expect(getAllByTestId(/todo-list-item-\d+/).length).toBe(listItemCount - 1);
   });
 });

@@ -9,6 +9,5 @@ describe('<Button />', () => {
     // Act
     // Assert
     expect(container).toHaveTextContent('Send Data');
-    // expect(container).toMatchSnapshot();
   });
 });
